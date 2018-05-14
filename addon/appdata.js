@@ -17,7 +17,7 @@ $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
 		for (let i = 0; i < allAlgorithms.length; i++){
 
 			let algoBox = document.createElement('div'); //This is the box that encases 1 algorithm.
-			algoBox.setAttribute('class', allAlgorithms[i]['row']);
+			algoBox.setAttribute('class', 'algorithm ' + allAlgorithms[i]['row']);
 			algoBox.setAttribute('id', allAlgorithms[i]['algorithmName']);
 
 			let boxImage = document.createElement('img');
@@ -41,38 +41,7 @@ $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
 		}
 	}
 
-		function searchFunction() { 
-			var selectAllAlgorithms = document.querySelectorAll('#algorithms .algorithm');    
-			var search = document.querySelector('#filter-search');
-			var cache = [];
 
-			selectAllAlgorithms.forEach(function(one_algorithm) {
-				cache.push({
-				  element: one_algorithm,
-				  text: one_algorithm.id.trim().toLowerCase()
-				});
-			});
 
-			function filter() {
-			var query = this.value.trim().toLowerCase();
-				cache.forEach(function(algorithmText) {
-				  var index = 0;
-
-				  if (query) {
-				    index = algorithmText.text.indexOf(query);
-				  }
-
-				  algorithmText.element.style.display = index === -1 ? 'none' : '';
-				});
-			}
-
-			if ('oninput' in search) {
-				search.addEventListener('input', filter);
-			} 
-			else {
-				search.addEventListener('keyup', filter);
-			}
-		}
-
-	createElements();
-	searchFunction();
+createElements();
+//searchFunction();
