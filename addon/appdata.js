@@ -41,4 +41,4 @@ function createElements(){
 	}
 }
 
-createElements();
+window.onload = createElements;
