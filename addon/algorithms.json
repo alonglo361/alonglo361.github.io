@@ -2,42 +2,42 @@
    "results":[  
       {  
          "name":"Insertion Sort",
-         "imageSource":"insertionsort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/insertionsort.gif",
          "row":"algorithm 1"
       },
       {  
          "name":"Selection Sort",
-         "imageSource":"selectionsort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/selectionsort.gif",
          "row":"algorithm 2"
       },
       {  
          "name":"Bubble Sort",
-         "imageSource":"bubblesort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/bubblesort.gif",
          "row":"algorithm 3"
       },
       {  
          "name":"Shell Sort",
-         "imageSource":"shellsort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/shellsort.gif",
          "row":"algorithm 4"
       },
       {  
          "name":"Merge Sort",
-         "imageSource":"mergesort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/mergesort.gif",
          "row":"algorithm 5"
       },
       {  
          "name":"Heap Sort",
-         "imageSource":"heapsort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/heapsort.gif",
          "row":"algorithm 6"
       },
       {  
          "name":"Quick Sort",
-         "imageSource":"quicksort.gif",
+         "imageSource":"https://alonglo361.github.io/addon/quicksort.gif",
          "row":"algorithm 7"
       },
       {  
          "name":"Quick Sort 3-way",
-         "imageSource":"quicksort3way.gif",
+         "imageSource":"https://alonglo361.github.io/addon/quicksort3way.gif",
          "row":"algorithm 8"
       }
    ]
