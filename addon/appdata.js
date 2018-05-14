@@ -6,13 +6,13 @@ holdAlgorithms.setAttribute('id', 'algorithm');
 let allAlgorithms = [];
 // let sortByName;
 // let sortByPlace;
-
-$.getJSON('algorithms.json', function(data) {
+let ex = "gay";
+$.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
+	ex = "gaytony";
 	for (let i = 0; i < data['results'].length; i++){ 
     	allAlgorithms.push({algorithmName: data['results'][i]['name'], img: data['results'][i]['imageSource'], row: data['results'][i]['row']});
     }
 });
-
 
 
 function createElements(){ 
