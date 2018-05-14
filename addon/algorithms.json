@@ -3,42 +3,42 @@
       {  
          "name":"Insertion Sort",
          "imageSource":"insertionsort.gif",
-         "row":"1"
+         "row":"algorithm 1"
       },
       {  
          "name":"Selection Sort",
          "imageSource":"selectionsort.gif",
-         "row":"2"
+         "row":"algorithm 2"
       },
       {  
          "name":"Bubble Sort",
          "imageSource":"bubblesort.gif",
-         "row":"3"
+         "row":"algorithm 3"
       },
       {  
          "name":"Shell Sort",
          "imageSource":"shellsort.gif",
-         "row":"4"
+         "row":"algorithm 4"
       },
       {  
          "name":"Merge Sort",
          "imageSource":"mergesort.gif",
-         "row":"5"
+         "row":"algorithm 5"
       },
       {  
          "name":"Heap Sort",
          "imageSource":"heapsort.gif",
-         "row":"6"
+         "row":"algorithm 6"
       },
       {  
          "name":"Quick Sort",
          "imageSource":"quicksort.gif",
-         "row":"7"
+         "row":"algorithm 7"
       },
       {  
          "name":"Quick Sort 3-way",
          "imageSource":"quicksort3way.gif",
-         "row":"8"
+         "row":"algorithm 8"
       }
    ]
 }
