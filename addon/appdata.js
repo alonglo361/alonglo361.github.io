@@ -42,4 +42,19 @@ function createElements(){
    }
 }
 
-window.onload = createElements;
+function createInfoBox(){
+   let infobox = document.createElement('article');
+   let information = document.createElement('p');
+   infobox.appendChild(information);
+   infobox.setAttribute('id', "more-info");
+   infobox.setAttribute("onclick", "showHide();");
+}
+
+
+
+function start() {
+	createElements();
+	createInfoBox();
+
+}
+window.onload = start;
