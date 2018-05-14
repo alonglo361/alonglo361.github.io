@@ -74,4 +74,9 @@ function start() {
 	createInfoBox();
 
 }
+
+$(document).click(function(event) {
+	alert(event.target.id);
+});
+
 window.onload = start;
