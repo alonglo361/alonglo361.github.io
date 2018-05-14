@@ -42,4 +42,4 @@ function createElements(){
    }
 }
 
-window.onload = createInfoBox;
+window.onload = createElements;
