@@ -56,7 +56,7 @@ function createInfoBox(){
    document.body.appendChild(infobox);
 }
 
-$('section.algorithm').click(function(){
+$('section').click(function(){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
 
@@ -74,9 +74,5 @@ function start() {
 	createInfoBox();
 
 }
-
-$(document).click(function(event) {
-	alert(event.target.id);
-});
 
 window.onload = start;
