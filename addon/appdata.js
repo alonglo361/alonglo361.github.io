@@ -56,11 +56,53 @@ function createInfoBox(){
    document.body.appendChild(infobox);
 }
 
-$(document).on('click', '.algorithm', function (){
+$(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
 
+   var test = document.querySelector('p');
+   $("p").empty();
+   if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
+      let create = document.createTextNode('This is insertion sort.');
+      test.appendChild(create);
+
+   }
+   else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
+      let create = document.createTextNode('This is selection sort.');
+      test.appendChild(create);
+      }
+
+   else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+      }
+   else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+      }
+
+   else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+   }
+
+   else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+}
+
+   else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+   }
+
+   else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
+      let create = document.createTextNode('heyyy lol');
+      test.appendChild(create);
+   }
 });
+
+
 
 
 $(document).on('click', '#clickExit', function () {
