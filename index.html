@@ -9,12 +9,8 @@
 		<div id="search">
 	      <input type="text" placeholder="Leita" id="filter-search" />
 	    </div>
-	    <ul>
-	    	<li onclick="sortByName()" id="sortByButton">NAFN</li>
-	    	<li onclick="sortByPlace()" id="sortByButton">STAÐUR</li>
-		</ul>
-
-		<span>
+	    <!--
+		<span id="algorithms">
 			<section class="algorithm 1" id="Insertion Sort">
 				<img src="addon/insertionsort.gif">
 				<div class="infoDiv">
@@ -35,7 +31,7 @@
 				<img src="addon/bubblesort.gif">
 				<div class="infoDiv">
 					<div>
-						<strong> Bubble Sort </strong> <!-- Name put into javascript -->
+						<strong> Bubble Sort </strong> <!-7- Name put into javascript -7->
 					</div>
 				</div>
 			</section>
@@ -48,9 +44,11 @@
 				</div>
 			</section>
 		</span>
+	-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="addon/appdata.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="addon/appdata.js"></script>
+
 
 	</body>
 </html>
@@ -60,23 +58,23 @@
 <!-- 
 
 	function createElements(){ 
-		for (let x = 0; x < data['results'].length; x++){
+		for (let i = 0; i < allAlgorithms.length; i++){
 
-			let algoBox = document.createElement('div'); //This is the box that encases 1 algorithm.
-			algoBox.setAttribute('class', allAlgorithms[x]['row']);
-			algoBox.setAttribute('id', allAlgorithms[x]['algorithmName']);
+			let algoBox = document.createElement('section'); //This is the box that encases 1 algorithm.
+		//	algoBox.setAttribute('class', 'algorithm ' + allAlgorithms[i]['row']);
+		//	algoBox.setAttribute('id', allAlgorithms[i]['algorithmName']);
 
 			let boxImage = document.createElement('img');
-			boxImage.setAttribute('src', allAlgorithms[x]['img']);
+		//	boxImage.setAttribute('src', allAlgorithms[i]['img']);
 			algoBox.appendChild(boxImage);
 
 			let infoElem = document.createElement('div');
-			infoElem.setAttribute('class', 'infoDiv');
+		//	infoElem.setAttribute('class', 'infoDiv');
 			algoBox.appendChild(infoElem);
 
 			let infoName = document.createElement('div');
 			let strong = document.createElement('strong');
-			let strongName = document.createTextNode(allAlgorithms[x]['name']);
+			let strongName = document.createTextNode(allAlgorithms[i]['algorithmName']);
 			infoName.appendChild(strong);
 			infoName.appendChild(strongName);
 			infoElem.appendChild(infoName);
@@ -84,9 +82,12 @@
 			holdAlgorithms.appendChild(algoBox);
 
 			document.body.appendChild(holdAlgorithms);
-
 		}
 	}
+
+
+createElements();
+//searchFunction();
 
 
 	function searchFunction() { // Fall sem searchar í gegnum öll concerts
@@ -184,37 +185,37 @@
 
 
 
-		function searchFunction() { // Fall sem searchar í gegnum öll concerts
-		var selectAllConcert = document.querySelectorAll('#concerts .concert');    
-		var search = document.querySelector('#filter-search');
-		var cache = [];
+		function searchFunction() { 
+			var selectAllAlgorithms = document.querySelectorAll('#algorithms .algorithm');    
+			var search = document.querySelector('#filter-search');
+			var cache = [];
 
-		selectAllConcert.forEach(function(single_concert) {
-			cache.push({
-			  element: single_concert,
-			  text: single_concert.id.trim().toLowerCase()
+			selectAllAlgorithms.forEach(function(one_algorithm) {
+				cache.push({
+				  element: one_algorithm,
+				  text: one_algorithm.id.trim().toLowerCase()
+				});
 			});
-		});
-}
 
-		function filter() {
-		var query = this.value.trim().toLowerCase();
-			cache.forEach(function(concertText) {
-			  var index = 0;
+			function filter() {
+			var query = this.value.trim().toLowerCase();
+				cache.forEach(function(algorithmText) {
+				  var index = 0;
 
-			  if (query) {
-			    index = concertText.text.indexOf(query);
-			  }
+				  if (query) {
+				    index = algorithmText.text.indexOf(query);
+				  }
 
-			  concertText.element.style.display = index === -1 ? 'none' : '';
-			});
-		}
+				  algorithmText.element.style.display = index === -1 ? 'none' : '';
+				});
+			}
 
-		if ('oninput' in search) {
-			search.addEventListener('input', filter);
-		} 
-		else {
-			search.addEventListener('keyup', filter);
+			if ('oninput' in search) {
+				search.addEventListener('input', filter);
+			} 
+			else {
+				search.addEventListener('keyup', filter);
+			}
 		}
 
 	createElements();
