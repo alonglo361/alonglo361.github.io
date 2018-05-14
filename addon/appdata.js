@@ -45,11 +45,16 @@ function createElements(){
 function createInfoBox(){
    let infobox = document.createElement('article');
    let information = document.createElement('p');
+   information.setAttribute('id', 'informationtext');
+   let exitButton = document.createElement('button');
+   exitButton.setAttribute('id', "clickExit");
+   let exit = document.createTextNode('X');
+   exitButton.appendChild(exit);
+   infobox.appendChild(exitButton);
    infobox.appendChild(information);
    infobox.setAttribute('id', "more-info");
-   infobox.setAttribute("onclick", "showHide();");
+   document.body.appendChild(infobox);
 }
-
 
 
 function start() {
