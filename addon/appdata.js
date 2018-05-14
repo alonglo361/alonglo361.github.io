@@ -14,7 +14,7 @@ $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
 
 
 function createElements(){ 
-	for (let i = 0; x < data['results'].length; i++){
+	for (let i = 0; i < data['results'].length; i++){
 
 		let algoBox = document.createElement('div'); //This is the box that encases 1 algorithm.
 		algoBox.setAttribute('class', allAlgorithms[i]['row']);
