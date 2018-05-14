@@ -79,3 +79,23 @@ img {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+#more-info{
+	display: none;
+	position: absolute;
+	width:60%;
+	left:400px;
+	top:100px;
+	bottom:50px;
+	border: 2px solid #45A29E;
+	background:#1F2833;
+
+}
+button{
+	margin-right: 0.5em;
+	font-size: 2em;
+	float: right;
+	background: none;
+	border: none;
+	color: #66FCF1;
+}
