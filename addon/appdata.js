@@ -102,30 +102,30 @@ $(document).on('click', '.algorithm', function (e){
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
-      createText(0);
+      createText(1);
     }
 
    else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
-      createText(0);
+      createText(2);
     }
    else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
-      createText(0);
+      createText(3);
     }
 
    else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
-      createText(0);
+      createText(4);
    }
 
    else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
-      createText(0);
+      createText(5);
 	}
 
    else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
-      createText(0);
+      createText(6);
    	}
 
    else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
-      createText(0);
+      createText(7);
    	}
 });
 
