@@ -14,15 +14,15 @@
 
 # Hvað mátti fara betra/ Bugs?
 
-## Ég þarf VIRKILEGA að laga kóðann, hann er ógeðslegur. Search var eitthvað sem ég ætlaði að bæta við en hafði ekki tíma. Ætlaði líka að bæta við fleiri reikniritum til þess að skoða, eru ekki það mörg en var í vafa við að birta gögnin á síðuna.
+## Ég þarf VIRKILEGA að laga kóðann, hann er ógeðslegur. Search var eitthvað sem ég ætlaði að bæta við en hafði ekki tíma. Ætlaði líka að bæta við fleiri reikniritum til þess að skoða, eru ekki það mörg en var í vafa við að birta gögnin á síðuna. Það er mjög stórt pláss í glugganum þegar þú ýtir á eitt reiknirit. Það er af því að það átti að sýna gif eða animation af því, hafði ekki tíma.
 
 ### Bug 1: Þarf stundum að refresh-a til þess að síðan virki.
 ### Bug 2: Þegar þú opnar nýjan glugga, býr js til nýtt elements, og það getur stackað upp mjög mikið.
 
 # Github Pages og Skjámyndsupptaka:
-https://alonglo361.github.io/
+Pages: https://alonglo361.github.io/
 
-Vídeo here.
+Video: https://youtu.be/4rb9eO0dmYw
 
 # Samantekt:
 
