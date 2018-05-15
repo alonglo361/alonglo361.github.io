@@ -91,7 +91,7 @@ function createText(x){ // This is so ugly and im so sorry but I'm so frustrated
 $(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
-
+   $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       createText(0);
 
@@ -138,7 +138,4 @@ function start() {
 }
 
 window.onload = start;
-
-
-
 
