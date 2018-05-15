@@ -52,28 +52,68 @@
 
    "textdata":[
       {
-         "text":"Insertion sort is a simple sorting algorithm. It sorts one item at a time, always moving the shortest to the left. It is much less efficient than other sorting algorithms when it comes to large lists and arrays, however, it shines when a list is nearly sorted due to its low overhead. Insertion sort can be, and is often used as a recursive base case for higher overhead divide-and-conquer sorting algorithms, like merge-sort. It has O(1) extra space. <br> Worst-case performance: O(n^2) comparisons, swaps <br> Best-case performance: O(n) comparisons, O(1) swaps <br> Average performance: O(n^2) comparisons, swaps <br> Worst-case space complexity: O(n) total, O(1) auxiliary <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Insertion_sort'>Here</a>"
+         "text":"Insertion sort is a simple sorting algorithm. It sorts one item at a time, always moving the shortest to the left. It is much less efficient than other sorting algorithms when it comes to large lists and arrays, however, it shines when a list is nearly sorted due to its low overhead. Insertion sort can be, and is often used as a recursive base case for higher overhead divide-and-conquer sorting algorithms, like merge-sort. It has O(1) extra space.",
+         "worst":"Worst-case performance: O(n^2) comparisons, swaps",
+         "best":"Best-case performance: O(n) comparisons, O(1) swaps",
+         "average":"Average performance: O(n^2) comparisons, swaps",
+         "space":"Worst-case space complexity: O(n) total, O(1) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Insertion_sort"
       },
       {
-         "text":"Selection sort is another in-place comparison sorting algorithm. It is generally not recommended to use on big lists, due to its O(n^2) time complexity and quadratic runtime. It is a simple algorithm that works by dividing the list into 2 parts, 1 part that is already sorted and the other which has not. Then the algorithm tries to find the smallest element in the unsorted list and exchanging it over to the left, which it will then put in the sorted order. It has a low amount of swaps, and where application cost is high, it is a good choice to use. It has O(1) extra space. <br> Worst-case performance: O(n^2) comparisons, O(n) swaps <br> Best-case performance: O(n^2) comparisons, O(n) swaps <br> Average performance: O(n^2) comparisons, O(n) swaps <br> Worst-case space complexity: O(1) auxiliary <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Selection_sort'>Here</a>"
+         "text":"Selection sort is another in-place comparison sorting algorithm. It is generally not recommended to use on big lists, due to its O(n^2) time complexity and quadratic runtime. It is a simple algorithm that works by dividing the list into 2 parts, 1 part that is already sorted and the other which has not. Then the algorithm tries to find the smallest element in the unsorted list and exchanging it over to the left, which it will then put in the sorted order. It has a low amount of swaps, and where application cost is high, it is a good choice to use. It has O(1) extra space.",
+         "worst":"Worst-case performance: O(n^2) comparisons, O(n) swaps",
+         "best":"Best-case performance: O(n^2) comparisons, O(n) swaps",
+         "average":"Average performance: O(n^2) comparisons, O(n) swaps",
+         "space":"Worst-case space complexity: O(1) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Selection_sort"
       },
       {
-         "text":"Bubble sort is a sorting algorithm that is similar to Insertion-sort. It compares each pair of adjacent items and swaps them if they´re in the wrong order. It is repeated until no passes are needed. Bubble sort is known for being one of the simplest sorting algorithms to understand, but due to its simplicity, it is very inefficient. It is sometimes referred to as 'sinking sort'. It has O(1) extra space. <br> Worst-case performance: O(n^2) comparisons, swaps <br> Best-case performance: O(n) comparisons, swaps <br> Average performance: O(n^2) comparisons, swaps <br> Worst-case space complexity: O(1) auxiliary <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Bubble_sort>Here</a>"
+         "text":"Bubble sort is a sorting algorithm that is similar to Insertion-sort. It compares each pair of adjacent items and swaps them if they´re in the wrong order. It is repeated until no passes are needed. Bubble sort is known for being one of the simplest sorting algorithms to understand, but due to its simplicity, it is very inefficient. It is sometimes referred to as 'sinking sort'. It has O(1) extra space",
+         "worst":"Worst-case performance: O(n^2) comparisons, swaps",
+         "best":"Best-case performance: O(n) comparisons, swaps",
+         "average":"Average performance: O(n^2) comparisons, swaps",
+         "space":"Worst-case space complexity: O(1) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Bubble_sort"
       },
       {
-         "text":"Shell sort is an in-place comparison sorting algorithm. It sorts pairs of elements far apart from each other, and then progressively reduces the gap between the elements to be compared. The running time of Shell sort heavily depends on the gap sequence used. Determining it's time complexity is varied, and so it remains as an open problem. Because shell sort is based on Insertion-sort, it inherits it's adaptive properties. It has O(1) extra space. <br> Worst-case performance: O(n^2) worst known gap sequence, O(n log^2 n) best known gap sequence <br> Best-case performance: O(n log n) comparisons, swaps <br> Average performance: dependant on gap sequence <br> Worst-case space complexity: O(n) total, O(1) auxiliary <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Shellsort'>Here</a>"
+         "text":"Shell sort is an in-place comparison sorting algorithm. It sorts pairs of elements far apart from each other, and then progressively reduces the gap between the elements to be compared. The running time of Shell sort heavily depends on the gap sequence used. Determining it's time complexity is varied, and so it remains as an open problem. Because shell sort is based on Insertion-sort, it inherits it's adaptive properties. It has O(1) extra space.",
+         "worst":"Worst-case performance: O(n^2) worst known gap sequence, O(n log^2 n) best known gap sequence",
+         "best":"Best-case performance: O(n log n) comparisons, swaps",
+         "average":"Average performance: dependant on gap sequence",
+         "space":"Worst-case space complexity: O(n) total, O(1) auxiliary",
+         "info": "https://en.wikipedia.org/wiki/Shellsort"
       },
       {
-         "text":"Merge sort is an efficient comparison-based sorting algorithm. It is a divide and conquer algorithm, that works by dividing a list into the smallest unit and then comparing each element with the adjacent list to sort andd merge the two adjacent lists. Lastly the elements are sorted and merged. It is a predictable algorithm, that is an excellent choice if using O(n) for extra space is of no concern. It is also simple to implement and is the only stable O(n*log(n)) sorting algorithm. Good for use when sorting linked lists. It has O(n) extra space for arrays, and O(lg(n)) extra space for linked lists. <br> Worst-case performance: O(n log n) <br> Best-case performance: O(n log n) typical, O(n) natural variant <br> Average performance: O(n log n) <br> Worst-case space complexity: O(n) total, O(n) auxiliary, O(1) auxiliary with linked lists <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Merge-sort'>Here</a>"
+         "text":"Merge sort is an efficient comparison-based sorting algorithm. It is a divide and conquer algorithm, that works by dividing a list into the smallest unit and then comparing each element with the adjacent list to sort andd merge the two adjacent lists. Lastly the elements are sorted and merged. It is a predictable algorithm, that is an excellent choice if using O(n) for extra space is of no concern. It is also simple to implement and is the only stable O(n*log(n)) sorting algorithm. Good for use when sorting linked lists. It has O(n) extra space for arrays, and O(lg(n)) extra space for linked lists.",
+         "worst":"Worst-case performance: O(n log n)",
+         "best": "Best-case performance: O(n log n) typical, O(n) natural variant",
+         "average":"Average performance: O(n log n)",
+         "space":"Worst-case space complexity: O(n) total, O(n) auxiliary, O(1) auxiliary with linked lists",
+         "info":"https://en.wikipedia.org/wiki/Merge-sort"
       },
       {
-         "text":"Heapsort is a comparison-based sorting algorithm that is like an improved selection sort. It divides the lsit into a sorted and unsorted list, and iteratively shrinks the unsorted list by moving the largest element over to the sorted region. It is slower on most machines than quicksort, but has a better worst-case runtime. It is an in-place algorithm, but not a stable sort. It is simple to implement. It has O(1) extra space potentially. <br> Worst-case performance: O(n log n) <br> Best-case performance: O(n log n) distinct keys, O(n) equal keys <br> Average performance: O(n log n) <br> Worst-case space complexity: O(1) auxiliary <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Heapsort'>Here</a>"
+         "text":"Heapsort is a comparison-based sorting algorithm that is like an improved selection sort. It divides the lsit into a sorted and unsorted list, and iteratively shrinks the unsorted list by moving the largest element over to the sorted region. It is slower on most machines than quicksort, but has a better worst-case runtime. It is an in-place algorithm, but not a stable sort. It is simple to implement. It has O(1) extra space potentially.",
+         "worst":"Worst-case performance: O(n log n)",
+         "best":"Best-case performance: O(n log n) distinct keys, O(n) equal keys",
+         "average":"Average performance: O(n log n)",
+         "space":"Worst-case space complexity: O(1) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Heapsort"
       },
       {
-         "text":"Quicksort is an efficient comparison-based sorting algorithm that is still commonly used for sorting. When implemented well, it can be 3 or 4 times faster than merge sort and heap sort. It requires small amounts of memory to perform sorting. Quicksort works by choosing a pivot, and then creating two lists. Elements that are less than the pivot go into one list and elements that are greater than the pivot go to the other. Then the lists are sorted and joined. Pivot selection is key in order for Quicksort to work efficiently. Quicksort is not adaptive. It has O(lg(n)) extra space potentially. <br> Worst-case performance: O(n^2) <br> Best-case performance: O(n log n) <br> Average performance: O(n log n) <br> Worst-case space complexity: O(n) auxiliary with naive, O(log n) auxiliary  <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Quicksort'>Here</a>"
+         "text":"Quicksort is an efficient comparison-based sorting algorithm that is still commonly used for sorting. When implemented well, it can be 3 or 4 times faster than merge sort and heap sort. It requires small amounts of memory to perform sorting. Quicksort works by choosing a pivot, and then creating two lists. Elements that are less than the pivot go into one list and elements that are greater than the pivot go to the other. Then the lists are sorted and joined. Pivot selection is key in order for Quicksort to work efficiently. Quicksort is not adaptive. It has O(lg(n)) extra space potentially.",
+         "worst":"Worst-case performance: O(n^2)",
+         "best":"Best-case performance: O(n log n)",
+         "average":"Average performance: O(n log n)",
+         "space":"Worst-case space complexity: O(n) auxiliary with naive, O(log n) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Quicksort"
       },
       {
-         "text":"Quicksort 3-way is a slightly improved version of the normal quicksort. It has a slightly higher overhead compared to the standard quicksort. They have the same best-, worst- and average-case time complexity but the 3-way quicksort has better adaptiveness in sorting with unique keys. Quicksort 3-way is adaptive, with O(n) time wien O(1) unique keys. It is not stable, and has O(lg(n)) of extra space. <br> Worst-case performance: O(n^2) <br> Best-case performance: O(n) with equal keys <br> Average performance: O(n log n) <br> Worst-case space complexity: O(n) auxiliary with naive, O(log n) auxiliary  <br> <br> More information? Click <a href='https://en.wikipedia.org/wiki/Quicksort'>Here</a>"
+         "text":"Quicksort 3-way is a slightly improved version of the normal quicksort. It has a slightly higher overhead compared to the standard quicksort. They have the same best-, worst- and average-case time complexity but the 3-way quicksort has better adaptiveness in sorting with unique keys. Quicksort 3-way is adaptive, with O(n) time wien O(1) unique keys. It is not stable, and has O(lg(n)) of extra space.",
+         "worst":" Worst-case performance: O(n^2)",
+         "best":"Best-case performance: O(n) with equal keys",
+         "average":"Average performance: O(n log n)",
+         "space":"Worst-case space complexity: O(n) auxiliary with naive, O(log n) auxiliary",
+         "info":"https://en.wikipedia.org/wiki/Quicksort"
       }
    ]
 }
