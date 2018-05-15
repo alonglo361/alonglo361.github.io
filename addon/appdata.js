@@ -56,7 +56,7 @@ function createInfoBox(){
    document.body.appendChild(infobox);
 }
 
-function createText(x){
+function createText(x){ // This is so ugly and im so sorry but I'm so frustrated.
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
 	let firstp = document.createElement('p');
@@ -70,7 +70,7 @@ function createText(x){
 	let fifthp = document.createElement('p');
 	let actualspace = document.createTextNode(allText[x]['space']);
 	let sixthp = document.createElement('p');
-	let actualinfo = document.createTextNode("Learn More: " + allText[0]['info']);
+	let actualinfo = document.createTextNode("Learn More: " + allText[x]['info']);
 
 	firstp.appendChild(actualtext);
 	secondp.appendChild(actualworst);
@@ -147,6 +147,3 @@ function start() {
 }
 
 window.onload = start;
-
-
-
