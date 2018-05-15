@@ -57,44 +57,8 @@ function createInfoBox(){
 }
 
 function createText(x){ // This is so ugly and im so sorry but I'm so frustrated.
-	let deleting = document.getElementById('temp');
-	if (deleting.length) { // Checking if it exists.
-		deleting.remove();
-
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
-	textbox.setAttribute('id', 'temp');
-	let firstp = document.createElement('p');
-	let actualtext = document.createTextNode(allText[x]['text']);
-	let secondp = document.createElement('p');
-	let actualworst = document.createTextNode(allText[x]['worst']);
-	let thirdp = document.createElement('p');
-	let actualbest = document.createTextNode(allText[x]['best']);
-	let fourthp = document.createElement('p');
-	let actualavg = document.createTextNode(allText[x]['average']);
-	let fifthp = document.createElement('p');
-	let actualspace = document.createTextNode(allText[x]['space']);
-	let sixthp = document.createElement('p');
-	let actualinfo = document.createTextNode("Learn More: " + allText[x]['info']);
-
-	firstp.appendChild(actualtext);
-	secondp.appendChild(actualworst);
-	thirdp.appendChild(actualbest);
-	fourthp.appendChild(actualavg);
-	fifthp.appendChild(actualspace);
-	sixthp.appendChild(actualinfo);
-	textbox.appendChild(firstp);
-	textbox.appendChild(secondp);
-	textbox.appendChild(thirdp);
-	textbox.appendChild(fourthp);
-	textbox.appendChild(fifthp);
-	textbox.appendChild(sixthp);
-	divination.appendChild(textbox);
-	}
-
-	let divination = document.getElementById('more-info');
-	let textbox = document.createElement('div');
-	textbox.setAttribute('id', 'temp');
 	let firstp = document.createElement('p');
 	let actualtext = document.createTextNode(allText[x]['text']);
 	let secondp = document.createElement('p');
