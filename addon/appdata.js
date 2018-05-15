@@ -9,7 +9,7 @@ let allText = [];
 $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
    for (let i = 0; i < data['results'].length; i++){ 
       allAlgorithms.push({name: data['results'][i]['name'], algoid: data['results'][i]['id'], img: data['results'][i]['imageSource'], row: data['results'][i]['row']});
-      allText.push({text: data['textdata'][i]['text']})
+      allText.push({text: data['textdata'][i]['text'], worst: data['textdata'][i]['worst'], best: data['textdata'][i]['best'], average: data['textdata'][i]['average'], space: data['textdata'][i]['space'], info: data['textdata'][i]['info']})
     }
 });
 
@@ -116,3 +116,9 @@ function start() {
 }
 
 window.onload = start;
+
+
+
+// var br = document.createElement('br');
+// var testing = document.getElementById('more-info');
+// testing.appendChild(br);
