@@ -85,13 +85,13 @@ function createText(x){ // This is so ugly and im so sorry but I'm so frustrated
 	textbox.appendChild(fourthp);
 	textbox.appendChild(fifthp);
 	textbox.appendChild(sixthp);
-	$('#temp').replaceWith(textbox);
+	$('div.temp').replaceWith(textbox);
 }
 
 function updateText(){
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
-	textbox.setAttribute('id', 'temp');
+	textbox.setAttribute('class', 'temp');
 	let firstp = document.createElement('p');
 	let actualtext = document.createTextNode(allText[x]['text']);
 	let secondp = document.createElement('p');
