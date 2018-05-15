@@ -59,6 +59,7 @@ function createInfoBox(){
 function createText(x){ // This is so ugly and im so sorry but I'm so frustrated.
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
+	textbox.setAttribute('id', 'temp');
 	let firstp = document.createElement('p');
 	let actualtext = document.createTextNode(allText[x]['text']);
 	let secondp = document.createElement('p');
@@ -85,51 +86,41 @@ function createText(x){ // This is so ugly and im so sorry but I'm so frustrated
 	textbox.appendChild(fifthp);
 	textbox.appendChild(sixthp);
 	divination.appendChild(textbox);
-
 }
 
 $(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
-
-   var test = document.querySelector('p');
-   $("p").empty();
+   $('p').clear();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       createText(0);
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
-      let create = document.createTextNode(allText[1]['text']);
-      test.appendChild(create);
+      createText(1);
     }
 
    else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
-      let create = document.createTextNode(allText[2]['text']);
-      test.appendChild(create);
+      createText(2);
     }
    else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
-      let create = document.createTextNode(allText[3]['text']);
-      test.appendChild(create);
+      createText(3);
     }
 
    else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
-      let create = document.createTextNode(allText[4]['text']);
-      test.appendChild(create);
+      createText(4);
    }
 
    else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
-      let create = document.createTextNode(allText[5]['text']);
-      test.appendChild(create);
+      createText(5);
 	}
 
    else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
-      let create = document.createTextNode(allText[6]['text']);
-      test.appendChild(create);
+      createText(6);
    	}
 
    else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
-      let create = document.createTextNode(allText[7]['text']);
-      test.appendChild(create);
+      createText(7);
    	}
 });
 
@@ -147,3 +138,4 @@ function start() {
 }
 
 window.onload = start;
+
