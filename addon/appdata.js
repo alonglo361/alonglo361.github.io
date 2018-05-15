@@ -56,10 +56,9 @@ function createInfoBox(){
    document.body.appendChild(infobox);
 }
 
-function createText(x){ // This is so ugly and im so sorry but I'm so frustrated.
+function createText(x){
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
-	textbox.setAttribute('id', 'temp');
 	let firstp = document.createElement('p');
 	let actualtext = document.createTextNode(allText[x]['text']);
 	let secondp = document.createElement('p');
@@ -71,7 +70,7 @@ function createText(x){ // This is so ugly and im so sorry but I'm so frustrated
 	let fifthp = document.createElement('p');
 	let actualspace = document.createTextNode(allText[x]['space']);
 	let sixthp = document.createElement('p');
-	let actualinfo = document.createTextNode("Learn More: " + allText[x]['info']);
+	let actualinfo = document.createTextNode("Learn More: " + allText[0]['info']);
 
 	firstp.appendChild(actualtext);
 	secondp.appendChild(actualworst);
@@ -86,41 +85,51 @@ function createText(x){ // This is so ugly and im so sorry but I'm so frustrated
 	textbox.appendChild(fifthp);
 	textbox.appendChild(sixthp);
 	divination.appendChild(textbox);
+
 }
 
 $(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
+
+   var test = document.querySelector('p');
    $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       createText(0);
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
-      createText(1);
+      let create = document.createTextNode(allText[1]['text']);
+      test.appendChild(create);
     }
 
    else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
-      createText(2);
+      let create = document.createTextNode(allText[2]['text']);
+      test.appendChild(create);
     }
    else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
-      createText(3);
+      let create = document.createTextNode(allText[3]['text']);
+      test.appendChild(create);
     }
 
    else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
-      createText(4);
+      let create = document.createTextNode(allText[4]['text']);
+      test.appendChild(create);
    }
 
    else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
-      createText(5);
+      let create = document.createTextNode(allText[5]['text']);
+      test.appendChild(create);
 	}
 
    else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
-      createText(6);
+      let create = document.createTextNode(allText[6]['text']);
+      test.appendChild(create);
    	}
 
    else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
-      createText(7);
+      let create = document.createTextNode(allText[7]['text']);
+      test.appendChild(create);
    	}
 });
 
@@ -138,4 +147,6 @@ function start() {
 }
 
 window.onload = start;
+
+
 
