@@ -61,10 +61,10 @@ p{
 #more-info{
 	display: none;
 	position: absolute;
-	width:50%;
+	width:60%;
 	left:400px;
 	top:100px;
-	bottom:300px;
+	bottom:200px;
 	border: 2px solid #45A29E;
 	background:#1F2833;
 
