@@ -57,11 +57,13 @@ function createInfoBox(){
 }
 
 function createText(x){
-	let deleting = document.getElementById('tempo');
-	deleting.parentNode.removeChild(deleting);
+	let deleting = document.getElementById('temp');
+	if (deleting.length) { // Checking if it exists.
+		deleting.remove();
+	}
 	let divination = document.getElementById('more-info');
 	let textbox = document.createElement('div');
-	textbox.setAttribute('id', 'tempo');
+	textbox.setAttribute('id', 'temp');
 	let firstp = document.createElement('p');
 	let actualtext = document.createTextNode(allText[x]['text']);
 	let secondp = document.createElement('p');
