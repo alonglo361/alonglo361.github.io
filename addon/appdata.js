@@ -45,7 +45,7 @@ function createElements(){
 function createInfoBox(){
    let infobox = document.createElement('article');
    let information = document.createElement('p');
-   information.setAttribute('id', 'informationtext');
+   information.setAttribute('id', 'informationtext'); // Whats the point
    let exitButton = document.createElement('button');
    exitButton.setAttribute('id', "clickExit");
    let exit = document.createTextNode('X');
@@ -56,6 +56,38 @@ function createInfoBox(){
    document.body.appendChild(infobox);
 }
 
+function createText(x){
+	let divination = document.getElementById('more-info');
+	let textbox = document.createElement('div');
+	let firstp = document.createElement('p');
+	let actualtext = document.createTextNode(allText[x]['text']);
+	let secondp = document.createElement('p');
+	let actualworst = document.createTextNode(allText[x]['worst']);
+	let thirdp = document.createElement('p');
+	let actualbest = document.createTextNode(allText[x]['best']);
+	let fourthp = document.createElement('p');
+	let actualavg = document.createTextNode(allText[x]['average']);
+	let fifthp = document.createElement('p');
+	let actualspace = document.createTextNode(allText[x]['space']);
+	let sixthp = document.createElement('p');
+	let actualinfo = document.createTextNode("Learn More: " + allText[0]['info']);
+
+	firstp.appendChild(actualtext);
+	secondp.appendChild(actualworst);
+	thirdp.appendChild(actualbest);
+	fourthp.appendChild(actualavg);
+	fifthp.appendChild(actualspace);
+	sixthp.appendChild(actualinfo);
+	textbox.appendChild(firstp);
+	textbox.appendChild(secondp);
+	textbox.appendChild(thirdp);
+	textbox.appendChild(fourthp);
+	textbox.appendChild(fifthp);
+	textbox.appendChild(sixthp);
+	divination.appendChild(textbox);
+
+}
+
 $(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
@@ -63,8 +95,7 @@ $(document).on('click', '.algorithm', function (e){
    var test = document.querySelector('p');
    $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
-      let create = document.createTextNode(allText[0]['text']);
-      test.appendChild(create);
+      createText(0);
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
@@ -119,6 +150,4 @@ window.onload = start;
 
 
 
-// var br = document.createElement('br');
-// var testing = document.getElementById('more-info');
-// testing.appendChild(br);
+
