@@ -9,7 +9,7 @@ let allText = [];
 $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
    for (let i = 0; i < data['results'].length; i++){ 
       allAlgorithms.push({name: data['results'][i]['name'], algoid: data['results'][i]['id'], img: data['results'][i]['imageSource'], row: data['results'][i]['row']});
-      allText.push({text: data['textdata'][i]['text']})
+      allText.push({text: data['textdata'][i]['text'], worst: data['textdata'][i]['worst'], best: data['textdata'][i]['best'], average: data['textdata'][i]['average'], space: data['textdata'][i]['space'], info: data['textdata'][i]['space']})
     }
 });
 
@@ -44,6 +44,8 @@ function createElements(){
 
 function createInfoBox(){
    let infobox = document.createElement('article');
+   let infodiv = document.createElement('div');
+   infodiv.setAttribute('id', 'textinfo');
    let information = document.createElement('p');
    information.setAttribute('id', 'informationtext');
    let exitButton = document.createElement('button');
@@ -51,7 +53,8 @@ function createInfoBox(){
    let exit = document.createTextNode('X');
    exitButton.appendChild(exit);
    infobox.appendChild(exitButton);
-   infobox.appendChild(information);
+   infodiv.appendChild(information);
+   infobox.appendCHild(infodiv);
    infobox.setAttribute('id', "more-info");
    document.body.appendChild(infobox);
 }
@@ -60,46 +63,54 @@ $(document).on('click', '.algorithm', function (e){
    checkOpacity = document.getElementById('more-info');
    checkOpacity.style.display = "block";
 
-   var test = document.querySelector('p');
+   var writeP = document.querySelector('p');
+   var writeDiv = document.getElementById('textinfo');
+
    $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       let create = document.createTextNode(allText[0]['text']);
-      test.appendChild(create);
+      writeP.appendChild(create);
+      writeDiv.appendChild(allText[0]['worst']);
+      writeDiv.appendChild(allText[0]['best']);
+      writeDiv.appendChild(allText[0]['average']);
+      writeDiv.appendChild(allText[0]['space']);
+      writeDiv.appendChild('If you want to learn more: Click here:')
+      writeDiv.appendChild(allText[0]['info']);
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
       let create = document.createTextNode(allText[1]['text']);
-      test.appendChild(create);
-      }
+      writeP.appendChild(create);
+    }
 
    else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
       let create = document.createTextNode(allText[2]['text']);
-      test.appendChild(create);
-      }
+      writeP.appendChild(create);
+    }
    else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
       let create = document.createTextNode(allText[3]['text']);
-      test.appendChild(create);
-      }
+      writeP.appendChild(create);
+    }
 
    else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
       let create = document.createTextNode(allText[4]['text']);
-      test.appendChild(create);
+      writeP.appendChild(create);
    }
 
    else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
       let create = document.createTextNode(allText[5]['text']);
-      test.appendChild(create);
-}
+      writeP.appendChild(create);
+	}
 
    else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
       let create = document.createTextNode(allText[6]['text']);
-      test.appendChild(create);
-   }
+      writeP.appendChild(create);
+   	}
 
    else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
       let create = document.createTextNode(allText[7]['text']);
-      test.appendChild(create);
-   }
+      writeP.appendChild(create);
+   	}
 });
 
 
