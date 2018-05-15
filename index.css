@@ -38,7 +38,7 @@ input:focus {
 	border: 2px solid #bfbfbf;
 	box-shadow: 1px 1px #888888;
 }
-.info{
+.infoDiv{
 	line-height: 20px;
 	padding: 25px;
 	font-size: 1em;
@@ -47,15 +47,37 @@ strong{
 	color: #66FCF1;
 	font-size: 1.25em;
 }
+ul {
+	border-spacing: 5px;
+	font-size: 1.5em;
+	margin: auto;
+	width: 50%;
+	padding: 25px;
+    list-style-type: none;
+    display:table;
+}
+li {
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+    display: table-cell;
+    cursor: pointer;
+}
+li:hover{
+	background: #bababa;
+}
 
 img {
 	width: 30%;
 	height: 30%;
 }
 
-p{
-	text-align: left;
-	padding: 2em;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #more-info{
@@ -64,7 +86,7 @@ p{
 	width:60%;
 	left:400px;
 	top:100px;
-	bottom:200px;
+	bottom:50px;
 	border: 2px solid #45A29E;
 	background:#1F2833;
 
@@ -76,12 +98,4 @@ button{
 	background: none;
 	border: none;
 	color: #66FCF1;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
