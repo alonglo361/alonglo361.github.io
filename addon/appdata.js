@@ -70,13 +70,6 @@ $(document).on('click', '.algorithm', function (e){
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       let create = document.createTextNode(allText[0]['text']);
       writeP.appendChild(create);
-      writeDiv.appendChild(allText[0]['worst']);
-      writeDiv.appendChild(allText[0]['best']);
-      writeDiv.appendChild(allText[0]['average']);
-      writeDiv.appendChild(allText[0]['space']);
-      writeDiv.appendChild('If you want to learn more: Click here:')
-      writeDiv.appendChild(allText[0]['info']);
-
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
       let create = document.createTextNode(allText[1]['text']);
