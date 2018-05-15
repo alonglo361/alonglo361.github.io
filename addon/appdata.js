@@ -5,11 +5,11 @@ holdAlgorithms.setAttribute('id', 'algorithms');
 let checkOpacity; 
 
 let allAlgorithms = [];
-let ex = "gay";
+let allText = [];
 $.getJSON('https://alonglo361.github.io/addon/algorithms.json', function(data) {
-   ex = data;
    for (let i = 0; i < data['results'].length; i++){ 
       allAlgorithms.push({name: data['results'][i]['name'], algoid: data['results'][i]['id'], img: data['results'][i]['imageSource'], row: data['results'][i]['row']});
+      allText.push({text: data['textdata'][i]['text']})
     }
 });
 
@@ -25,7 +25,7 @@ function createElements(){
       algoBox.appendChild(boxImage);
 
       let infoElem = document.createElement('div');
-      infoElem.setAttribute('class', 'infoDiv');
+      infoElem.setAttribute('class', 'info');
       algoBox.appendChild(infoElem);
 
       let infoName = document.createElement('div');
@@ -63,46 +63,44 @@ $(document).on('click', '.algorithm', function (e){
    var test = document.querySelector('p');
    $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
-      let create = document.createTextNode('This is insertion sort.');
+      let create = document.createTextNode(allText[0]['text']);
       test.appendChild(create);
 
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
-      let create = document.createTextNode('This is selection sort.');
+      let create = document.createTextNode(allText[1]['text']);
       test.appendChild(create);
       }
 
    else if (e.target.parentNode.id === 'bubble-sort' || e.target.id === 'bubble-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[2]['text']);
       test.appendChild(create);
       }
    else if (e.target.parentNode.id === 'shell-sort' || e.target.id === 'shell-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[3]['text']);
       test.appendChild(create);
       }
 
    else if (e.target.parentNode.id === 'merge-sort' || e.target.id === 'merge-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[4]['text']);
       test.appendChild(create);
    }
 
    else if (e.target.parentNode.id === 'heap-sort' || e.target.id === 'heap-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[5]['text']);
       test.appendChild(create);
 }
 
    else if (e.target.parentNode.id === 'quick-sort' || e.target.id === 'quick-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[6]['text']);
       test.appendChild(create);
    }
 
    else if (e.target.parentNode.id === 'quick3way-sort' || e.target.id === 'quick3way-sort') {
-      let create = document.createTextNode('heyyy lol');
+      let create = document.createTextNode(allText[7]['text']);
       test.appendChild(create);
    }
 });
-
-
 
 
 $(document).on('click', '#clickExit', function () {
