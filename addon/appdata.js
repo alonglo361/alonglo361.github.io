@@ -45,7 +45,6 @@ function createElements(){
 function createInfoBox(){
    let infobox = document.createElement('article');
    let infodiv = document.createElement('div');
-   infodiv.setAttribute('id', 'textinfo');
    let information = document.createElement('p');
    information.setAttribute('id', 'informationtext');
    let exitButton = document.createElement('button');
@@ -64,12 +63,11 @@ $(document).on('click', '.algorithm', function (e){
    checkOpacity.style.display = "block";
 
    var writeP = document.querySelector('p');
-   var writeDiv = document.getElementById('textinfo');
-
    $("p").empty();
    if (e.target.parentNode.id === 'insertion-sort' || e.target.id === 'insertion-sort') {
       let create = document.createTextNode(allText[0]['text']);
       writeP.appendChild(create);
+
    }
    else if (e.target.parentNode.id === 'selection-sort' || e.target.id === 'selection-sort') {
       let create = document.createTextNode(allText[1]['text']);
